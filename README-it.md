@@ -52,13 +52,13 @@ Una checklist per le più importanti contromisure da mettere in pratica quando s
 - [ ] Inviare l'header `X-Frame-Options: deny`.
 - [ ] Inviare l'header `Content-Security-Policy: default-src 'none'`.
 - [ ] Rimuovere header che permettono il riconoscimento - `X-Powered-By`, `Server`, `X-AspNet-Version` ecc.
-- [ ] Forzare il `content-type` nella chiamata di risposta: se per esempio viene ritornato un `application/json` forzare il `content-type` a `application/json`.
-- [ ] Non ritornare mai dati sensibili come `credenziali`, `password`, `security tokens`.
-- [ ] Ritornare sempre lo status code corretto in base all'esito della chiamata. (es. `200 OK`, `400 Bad Request`, `401 Unauthorized`, `405 Method Not Allowed`, ecc).
+- [ ] Forzare il `content-type` nella risposta: se per esempio viene restituito un `application/json` forzare il `content-type` a `application/json`.
+- [ ] Non restituire mai dati sensibili come `credenziali`, `password`, `security tokens`.
+- [ ] Restituire sempre lo status code corretto in base all'esito della chiamata. (es. `200 OK`, `400 Bad Request`, `401 Unauthorized`, `405 Method Not Allowed`, ecc).
 
 ## CI & CD
 - [ ] Verificare il design attraverso gli unit/integration tests.
-- [ ] Definire e utilizzare una procedura di code review per il rilascio, evitando l'auto approvazione.
+- [ ] Definire e utilizzare una procedura di revisione del codice per il rilascio, evitando l'auto approvazione.
 - [ ] Verificare che tutti i componenti dei servizi siano controllati da software AV prima di essere messi in produzione, incluse le librerie di terze parti.
 - [ ] Definire una strategia di rollback per il deploy.
 
